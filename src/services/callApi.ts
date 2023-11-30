@@ -1,5 +1,4 @@
-import axios, { AxiosError } from "axios";
-import { ValidationError } from "../helper/ValidationError";
+import axios from "axios";
 
 const callApi = () => {
   const axiosInstance = axios.create({
