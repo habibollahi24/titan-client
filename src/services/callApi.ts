@@ -3,8 +3,8 @@ import { ValidationError } from "../helper/ValidationError";
 
 const callApi = () => {
   const axiosInstance = axios.create({
-    baseURL: "http://localhost:8080/",
-    // baseURL: "https://jsonplaceholder.typicode.com/users",
+    // baseURL: "http://localhost:8080/",
+    baseURL: "https://titan-server.onrender.com/",
   });
 
   // axiosInstance.defaults.headers.Authorization = `Bearer ${localStorage.getItem(
