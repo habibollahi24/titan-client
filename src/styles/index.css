@@ -1,0 +1,25 @@
+/* @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"); */
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* body {
+  background-color: #efefef;
+} */
+
+@layer components {
+  body {
+    @apply bg-secondary-200 dark:bg-secondary-800;
+  }
+  .btn {
+    @apply rounded-lg px-4 py-2 transition-all;
+  }
+  .btn-primary {
+    @apply bg-primary-800 text-white hover:ring-2 hover:ring-primary-800 hover:ring-offset-2 hover:ring-offset-secondary-100 dark:hover:ring-offset-secondary-800;
+  }
+  .btn-secondary {
+    @apply bg-secondary-600 text-secondary-100 hover:ring-2 hover:ring-secondary-500 hover:ring-offset-2 dark:hover:ring-offset-secondary-800;
+  }
+}
