@@ -3,6 +3,7 @@ import { useQuery } from "@tanstack/react-query";
 import callApi from "../../../services/callApi";
 import { FaUser } from "react-icons/fa";
 import formatDistance from "date-fns/formatDistance";
+import { MainLoading } from "../../../ui/loading";
 
 export const getUser = async () => {
   const response = await callApi().post(`/users/user`);
@@ -15,7 +16,7 @@ function MainCart() {
     queryFn: () => getUser(),
   });
 
-  if (isLoading) return <p>loading</p>;
+  if (isLoading) return <MainLoading />;
   const user = data?.data.user;
   // console.log(user);
   return (

@@ -1,5 +1,5 @@
 import { formatDistance } from "date-fns";
-import  { useState } from "react";
+import { useState } from "react";
 import {
   HiHeart,
   HiOutlineHeart,
@@ -9,6 +9,7 @@ import {
 import { useMutation, useQuery } from "@tanstack/react-query";
 import callApi from "../../../services/callApi";
 import Comment from "./Comment";
+import {  LoaderPostList } from "../../../ui/loading";
 
 export const getAllPosts = async () => {
   const response = await callApi().get(`/posts`);
@@ -51,7 +52,7 @@ function PostList() {
     mutateAsync(id);
   };
 
-  if (isLoading) return <p>loading</p>;
+  if (isLoading) return <LoaderPostList />;
   const posts = data?.data?.data;
   //   console.log(posts);
 

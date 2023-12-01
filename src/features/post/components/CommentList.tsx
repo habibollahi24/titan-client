@@ -3,6 +3,7 @@ import callApi from "../../../services/callApi";
 import { formatDistance } from "date-fns";
 import { HiHeart, HiOutlineHeart } from "react-icons/hi";
 import { getUser } from "./PostList";
+import { LoaderCommentList } from "../../../ui/loading";
 
 export const getComments = async (postId: string) => {
   const response = await callApi().get(`/posts/comments/${postId}`);
@@ -41,7 +42,7 @@ function CommentList({ postId }: Props) {
     await mutateAsync(commentId);
   };
 
-  if (isLoading) return <p>loading...</p>;
+  if (isLoading) return <LoaderCommentList />;
   return (
     <div>
       {comments.map((comment: any) => {
