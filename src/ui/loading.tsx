@@ -27,14 +27,14 @@ export function LoaderPostList({ number = 5 }: Props) {
         return (
           <div
             key={index}
-            className="mx-auto mb-6 h-96 w-full rounded-md bg-gray-100/30 dark:bg-gray-900/30 "
+            className="mx-auto mb-6  w-full rounded-md bg-gray-100/30 dark:bg-gray-900/30 "
           >
             <div className="flex h-full w-full animate-pulse flex-col space-y-4 p-8">
               <div className="flex items-center justify-between ">
                 <div className="h-10 w-10  rounded-full bg-gray-300 "></div>
                 <div className="h-10 w-28 rounded-md bg-gray-300 "></div>
               </div>
-              <div className="h-72 w-full  rounded-2xl bg-gray-300 "></div>
+              <div className="h-80 w-full  rounded-2xl bg-gray-300 "></div>
               <div className="flex flex-col space-y-3">
                 <div className="h-6 w-36 rounded-md bg-gray-300 "></div>
                 <div className="h-6 w-32 rounded-md bg-gray-300 "></div>
