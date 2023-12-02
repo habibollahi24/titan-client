@@ -67,7 +67,7 @@ function CreatePost() {
       const res = await response.json();
       setUrl(res.public_id);
       setImage(
-        `http://res.cloudinary.com/${
+        `https://res.cloudinary.com/${
           import.meta.env.VITE_CLOUDINARY_CLOUD_NAME
         }/image/upload/v1/` + res.public_id,
       );
